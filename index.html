@@ -33,13 +33,30 @@
         </div>
         </div>
     <div class="encriptado">
-        <div class="mensaje encriptado" id="mensaje-encriptado">
+        <img src="./img/muñeco.png" alt="" id="muñeco" />
+        <div class="mensaje-encriptado" id="mensaje-encriptado">
             <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-            <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar.</p>
-            <textarea name="mensaje" id="mensaje" class="mensaje" cols="30" rows="10"></textarea>
+            <p id="parrafo">
+                Ingresa el texto que deseas encriptar o desencriptar.
+            </p>
+            <!--<textarea name="mensaje" id="mensaje" class="mensaje" cols="30" rows="10"></textarea> -->
         </div>
+            <div class="botones2">
+                <button class="btn-copiar" type="button" onclick="copiar()">
+                    Copiar
+                </button>
+            </div>
+            <script>
+                function copiar() {
+
+                    var textarea = document.getElementById("texto");
+                    textarea.select();
+                    document.execCommand("copy");
+                    alert("Texto copiado!");
+                }    
+            </script>
     </div>
     </div>
+    <script src="./script.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
